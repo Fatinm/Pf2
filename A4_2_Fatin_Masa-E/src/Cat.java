@@ -6,6 +6,8 @@ public class Cat extends Mammal {
 	//Här har du missat this.numberOfLives = numberOfLives
 	public Cat(String latinName, String friendlyName, int gestationTime, int numberOfLives){
 		super(latinName, friendlyName, gestationTime);
+		this.numberOfLives = numberOfLives;
+		
 	}
 
 	public int getNumberOfLives(){
