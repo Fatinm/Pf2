@@ -43,6 +43,7 @@ public class AnimalGUI extends JFrame {
 	
 		ArrayList<Animal> listAnimal = new ArrayList<Animal>();
 		
+		//Katterna har båda 0 liv
 		listAnimal.add(new Dog("Canis Stupidus", "DumbDog" , 3, true));
 		listAnimal.add(new Dog("Canis Intelegentus","Snoop Dogg", 3, false));
 		listAnimal.add(new Cat( "Feles Mortalius", "PhatCat",  5, 4));

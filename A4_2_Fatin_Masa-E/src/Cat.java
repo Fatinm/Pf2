@@ -2,7 +2,8 @@
 public class Cat extends Mammal {
 
 	private int numberOfLives;
-
+	
+	//Här har du missat this.numberOfLives = numberOfLives
 	public Cat(String latinName, String friendlyName, int gestationTime, int numberOfLives){
 		super(latinName, friendlyName, gestationTime);
 	}

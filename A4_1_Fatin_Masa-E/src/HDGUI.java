@@ -72,6 +72,7 @@ public class HDGUI extends JFrame {
 		JButton btnNewHuman = new JButton("New Human");
 		btnNewHuman.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//När du använder < 4 kommer namn med 3 bokstäver inte bli inkluderade. använd < 3
 				if(textField.getText().length() < 4){
 					textArea_1.setText("Your name has to include atleast 3 letters"); 
 				}else{
