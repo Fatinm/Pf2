@@ -43,12 +43,12 @@ public class AnimalGUI extends JFrame {
 	
 		ArrayList<Animal> listAnimal = new ArrayList<Animal>();
 		
-		listAnimal.add(new Dog("Canis Stupidus", 3, true));
-		listAnimal.add(new Dog("Canis Intelegentus", 3, false));
-		listAnimal.add(new Cat("Feles Mortalius", 5, 4));
-		listAnimal.add(new Cat("Feles Deadlius", 5, 2));
-		listAnimal.add(new Snake("Anguis Poisy", true));
-		listAnimal.add(new Snake("Anguis Nopoisy", false));
+		listAnimal.add(new Dog("Canis Stupidus", "DumbDog" , 3, true));
+		listAnimal.add(new Dog("Canis Intelegentus","Snoop Dogg", 3, false));
+		listAnimal.add(new Cat( "Feles Mortalius", "PhatCat",  5, 4));
+		listAnimal.add(new Cat("Feles Deadlius", "Olof",  5, 2));
+		listAnimal.add(new Snake("PoSnake","Anguis Poisy", true));
+		listAnimal.add(new Snake("NoSnake", "Anguis Nopoisy", false));
 		;
 		contentPane.setLayout(null);
 		

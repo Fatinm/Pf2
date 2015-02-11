@@ -3,8 +3,8 @@ public class Cat extends Mammal {
 
 	private int numberOfLives;
 
-	public Cat(String latinName, int gestationTime, int numberOfLives){
-		super(latinName, gestationTime);
+	public Cat(String latinName, String friendlyName, int gestationTime, int numberOfLives){
+		super(latinName, friendlyName, gestationTime);
 	}
 
 	public int getNumberOfLives(){
@@ -23,9 +23,9 @@ public class Cat extends Mammal {
 		// TODO Auto-generated method stub
 		String s;
 		if(this.getNumberOfLives() == 1){
-			s = "The cat\"" + this.getLatinName() + "\" nurses for "+this.getGestationTime()+ "months and has" + " " + this.getNumberOfLives()+ " " +"life.\n";
+			s = "The cat\""+ super.getFriendlyName()+ "/" + this.getLatinName() + "\" nurses for "+this.getGestationTime()+ "months and has" + " " + this.getNumberOfLives()+ " " +"life.\n";
 		}else{
-			s = "The cat \"" + this.getLatinName() + "\" nurses for " + this.getGestationTime() + "months and has" + " " + this.getNumberOfLives() + " " + "lives.\n";
+			s = "The cat \"" + super.getFriendlyName() + "/" + this.getLatinName() + "\" nurses for " + this.getGestationTime() + "months and has" + " " + this.getNumberOfLives() + " " + "lives.\n";
 		}
 		return s;
 	}

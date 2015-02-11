@@ -4,19 +4,12 @@ public class Dog extends Mammal {
 	private boolean stupid;
 
 
-	public Dog(String latinName, int gestationTime, boolean stupid){
-		super (latinName, gestationTime);
+	public Dog(String latinName, String friendlyName, int gestationTime, boolean stupid){
+		super (latinName, friendlyName, gestationTime);
 		this.stupid = stupid;
 	}
 
-	public Dog(String friendlyName, String latinName, boolean stupid){
-		super(latinName, 20);
-		this.stupid = stupid;
-		
-		super.setFriendlyName(friendlyName);
-
-	}
-
+	
 	public boolean isStupid(){
 		return stupid;
 	}
@@ -28,9 +21,9 @@ public class Dog extends Mammal {
 		// TODO Auto-generated method stub
 		String s;
 		if(stupid){
-			s = "\n" + "The dog \"" + " " + this.getLatinName()+ "\" nurses for " + this.getGestationTime()+ "months and is stupid.\n";
+			s = "\n" + "The dog \"" + " " + super.getFriendlyName() + "/" + this.getLatinName()+ "\" nurses for " + this.getGestationTime()+ "months and is stupid.\n";
 		}else{
-			s ="The dog\""+ " " + this.getLatinName()+ "\" nurses for " + this.getGestationTime() + "months and isn't stupid.\n";
+			s ="The dog\""+ " " +  super.getFriendlyName() + "/" + this.getLatinName()+ "\" nurses for " + this.getGestationTime() + "months and isn't stupid.\n";
 		}
 		return s;
 	}
