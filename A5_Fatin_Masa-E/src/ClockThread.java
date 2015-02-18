@@ -8,7 +8,7 @@ public class ClockThread extends Thread {
 
 	}
 	
-	//Här ska vara en @Override
+	@Override
 	public void run(){
 
 	}

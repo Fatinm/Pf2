@@ -4,13 +4,19 @@ public class ClockLogic implements ClockInterface {
 	private int alarmHour;
 	private int alarmMinute;
 	
+	private int finalHour;
+	private int finalMinute;
+	
 	public ClockLogic(DigitalClockGUI clockIn){
-	
-	
+		this.clockGUI = clockIn;
+		
+		Thread t = new ClockThread (this);
+		t.start();
 	}
 	
-	
-	public void setAlarm(int hours, int minute){
+	public void setAlarm(int hours, int minutes){
+		this.alarmHour = hours;
+		this.alarmMinute = minutes;
 		
 	}
 	
