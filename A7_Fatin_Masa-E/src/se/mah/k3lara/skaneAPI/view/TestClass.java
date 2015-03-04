@@ -36,7 +36,7 @@ public class TestClass {
 		System.out.println("// Busses departing from Ubåtshallen stationsnummer 80046 ");
 		Lines lines = Parser.getStationResults(new Station("80046"));
 		for (Line l : lines.getLines()) {
-			System.out.println("Line " + l.getLine() +" departs: "+l.getDepTime().get(Calendar.HOUR_OF_DAY)+":"+l.getDepTime().get(Calendar.MINUTE)+
+			System.out.println("Bus to: " + l.getDestination() + "Line " + l.getLine() +" departs: "+l.getDepTime().get(Calendar.HOUR_OF_DAY)+":"+l.getDepTime().get(Calendar.MINUTE)+
 					" and is "+l.getDepTimeDeviation()+" minutes late");
 		}
 	}

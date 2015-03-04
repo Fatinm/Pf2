@@ -149,6 +149,7 @@ public class Parser {
 		String lineNo;
 		Calendar depTime;
 		String depTimeDeviation;
+		String toStationName;
 		Lines lines = new Lines(station);
 		String xml = parser.getXmlFromUrl(searchURL); // getting XML
 		if (xml!=null){
@@ -168,14 +169,15 @@ public class Parser {
 				//Get the value for that tag "JourneyDateTime"
 				depTimeDeviation = parser.getValue(e, "DepTimeDeviation"); 
 				if(debug){System.out.println("DepTimeDeviation: "+ depTimeDeviation);}
-				//Continue with all other elements in the Line node.......
-				//....
+				 toStationName = parser.getValue(e, "Towards");
+				 if(debug){System.out.println("Towards: "+toStationName);}
 				
 				//Then we got one Line lets create a line object and add it to Lines
 				Line l = new Line();
 				l.setDepTime(depTime);
 				l.setLine(lineNo);
 				l.setDepTimeDeviation(depTimeDeviation);
+				l.setDestination(toStationName);
 				lines.addLine(l);
 				//Ok next Line element
 			}		
